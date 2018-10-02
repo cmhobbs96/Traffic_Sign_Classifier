@@ -1,0 +1,60 @@
+###############################################################################################################################
+################################################### STEP 0: LOAD DATA #########################################################
+###############################################################################################################################
+
+# Load pickled data
+import pickle
+
+# TODO: Fill this in based on where you saved the training and testing data
+
+training_file = ?
+validation_file=?
+testing_file = ?
+
+with open(training_file, mode='rb') as f:
+    train = pickle.load(f)
+with open(validation_file, mode='rb') as f:
+    valid = pickle.load(f)
+with open(testing_file, mode='rb') as f:
+    test = pickle.load(f)
+    
+X_train, y_train = train['features'], train['labels']
+X_valid, y_valid = valid['features'], valid['labels']
+X_test, y_test = test['features'], test['labels']
+
+###############################################################################################################################
+######################################### STEP 1: DATASET SUMMARY AND EXPLORATION #############################################
+###############################################################################################################################
+
+### Replace each question mark with the appropriate value. 
+### Use python, pandas or numpy methods rather than hard coding the results
+
+# TODO: Number of training examples
+n_train = ?
+
+# TODO: Number of validation examples
+n_validation = ?
+
+# TODO: Number of testing examples.
+n_test = ?
+
+# TODO: What's the shape of an traffic sign image?
+image_shape = ?
+
+# TODO: How many unique classes/labels there are in the dataset.
+n_classes = ?
+
+print("Number of training examples =", n_train)
+print("Number of testing examples =", n_test)
+print("Image data shape =", image_shape)
+print("Number of classes =", n_classes)
+
+### Data exploration visualization code goes here.
+### Feel free to use as many code cells as needed.
+import matplotlib.pyplot as plt
+# Visualizations will be shown in the notebook.
+%matplotlib inline
+
+###############################################################################################################################
+######################################### STEP 2: DESIGN AND TEST A MODEL ARCHITECTURE #######################################
+###############################################################################################################################
